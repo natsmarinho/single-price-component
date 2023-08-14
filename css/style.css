@@ -22,6 +22,8 @@ body {
 .description {
     background: var(--branco);
     padding: 1.75rem 1.5rem 2rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 .description-title {
@@ -97,10 +99,40 @@ body {
     background: var(--ciano);
     opacity: .8;
     padding: 1.5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
 }
 
 .link-items a {
     color: var(--branco);
     opacity: 0.7;
     font-weight: 400;
+}
+
+
+@media (1200px <= width) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-areas: "description description"
+                            "price about-us ";
+        padding-inline: 25rem;
+        margin-top: 10vh;
+    }
+
+    .description {
+        grid-area: description;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .price {
+        border-bottom-left-radius: .5rem;
+    }
+
+    .about-us {
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: 0;
+    }
+
 }
